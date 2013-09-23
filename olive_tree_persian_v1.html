@@ -1,0 +1,122 @@
+<?php
+/**
+ *************************************
+ *Don't Delete This Message **Please**
+ *************************************
+ *name:    Olive Tree e-mail template*
+ *author:  amir christ               *
+ *email:   info@onenet.ir            *
+ *test:    everything is done!       *
+ *version: 1.0                       *
+ *************************************
+ */
+defined('PHPFOX') or exit('NO DICE!');
+?>
+{if $bHtml}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Olive Tree e-mail template</title>
+</head>
+<body dir="rtl" style="margin: 0; padding: 0;">
+<table border="0" cellpadding="110" cellspacing="0" width="98%">
+	<tbody><tr>
+		<td style="font-family: 'Tahoma',Arial,Helvetica,Geneva,sans-serif;" align="center" bgcolor="#E2E2E2" width="100%">
+<div align="right" style="border:1px solid #043948; padding:5px 5px; background:#043948; width:700px; border-radius: 8px 8px 0px 0px; font-color:#E7CBA3;"><a href="http://your-site.com" target="_blank" style="color: #E7CB97; text-decoration: none; style="font-family: 'Tahoma', Arial, Helvetica, Geneva, sans-serif;>{param var='core.site_title'}</a> <font color="E7CBA3">|</font> <a href="http://your-site.com/user/privacy/" target="_blank" style="color: #E7CBA3; text-decoration: none; style="font-family: 'Tahoma', Arial, Helvetica, Geneva, sans-serif;>حذف اشتراک</a>
+	<span style="float:left;"><img src="http://up.palringo.eu/uploads/137911867931.png" border="0" valign="top" />
+		<a href="http://facebook.com/your-id" target="_blank" style="font-weight: bold; color: #E7CBA3; text-decoration: none; font-weight: bold; font-size:12px;">فیسبوک</a>&nbsp;&nbsp;
+    <img src="http://up.palringo.eu/uploads/1379118682692.png" border="0" valign="top" />
+		<a href="http://twitter.com/your-id" target="_blank" style="font-weight: bold; color: #E7CBA3; text-decoration: none; font-weight: bold; font-size:12px;">توییتر</a>&nbsp;&nbsp;
+        <img src="http://up.palringo.eu/uploads/1379118683413.png" border="0" valign="top" />
+		<a href="http://your-site.com/invite/" target="_blank" style="font-weight: bold; color: #E7CBA3; text-decoration: none; font-weight: bold; font-size:12px;">دعوت دوستان</a>
+	</span>
+</div>
+<!--**********************************-->
+<!--             Logo                 -->
+<!--**********************************-->
+	<div height="100px" align="center" valign="middle" style="width:630px; background:#00707B; border:1px solid #00707B; padding:10px 40px;"><font color="#FFFFFF" style="text-decoration: none; font-size:36px; font-family:'Tahoma', Arial, Helvetica, Geneva, sans-serif;">
+{param var='core.site_title'} </font>
+    </div>
+<!--**********************************-->
+<!--         Email Content            -->
+<!--**********************************-->
+	<div style="padding:10px 10px; background:#FFFFFF; width:692px;" align="right" valign="middle">
+    <font style="text-decoration: none; font-size:18px; font-family:'Tahoma', Arial, Helvetica, Geneva, sans-serif;" color="#9A9661">محتوای ایمیل: </font> <br />
+    <font style="text-decoration: none; font-size:12px; font-family:'Tahoma', Arial, Helvetica, Geneva, sans-serif;" color="#9A9661">ایمیل ارسال شده در: </font>
+    <font style="text-decoration: none; font-size:12px; font-family:'Tahoma', Arial, Helvetica, Geneva, sans-serif;" color="#00707B">
+<?php
+/*****************************************
+* Persian TimeZone
+* Sunday 15th September 2013 - 07:20:51
+******************************************/
+$timezone = "Asia/Tehran";
+if(function_exists('date_default_timezone_set')) date_default_timezone_set($timezone);
+echo date('l jS F Y - H:i:s');
+?></font><br /><br />
+<font color="#00707B" style="text-decoration: none; font-size:12px; font-family:'Tahoma', Arial, Helvetica, Geneva, sans-serif;">          
+{if $bMessageHeader}
+{if isset($sName)}
+{phrase var='core.hello_name' name=$sName}
+{else}
+{phrase var='core.hello'}
+{/if},  <br />
+        <br />
+{/if}
+{$sMessage}</font><br /><br />
+<hr width="80%" color="#00707B"/>
+<!--**********************************-->
+<!--           Information            -->
+<!--**********************************-->
+	<div>
+    <table style="padding:20px 20px;" align="center">
+	<tbody>
+    	<tr>
+        	<td style="padding:10px 10px;"><img src="http://up.palringo.eu/uploads/13792379521.jpg" width="170px" height="100px" valign="middle" />
+            </td>
+            <td style="padding:10px 10px;"><img src="http://up.palringo.eu/uploads/1379237130561.jpg" width="170px" height="100px" valign="middle" />
+            </td>
+            <td style="padding:10px 10px;"><img src="http://up.palringo.eu/uploads/13792374441.jpg" width="170px" height="100px" valign="middle" />
+            </td>
+         <tr>
+         	<td style="padding:10px 10px;" align="center"><a style="color: #9A9661; text-decoration: none; font-weight: bold; style=" target="_blank" href="http://your-site.com/user/profile/">ویرایش پروفایل</a>
+            </td>
+            <td style="padding:10px 10px;" align="center"><a style="color: #9A9661; text-decoration: none; font-weight: bold; style=" target="_blank" href="http://your-site.com/contact/">تماس با ما</a>
+            </td>
+            <td style="padding:10px 10px;" align="center"><a style="color: #9A9661; text-decoration: none; font-weight: bold; style=" target="_blank" href="http://your-site.com/user/privacy/">حریم شخصی</a>
+            </td>
+         </tr>
+    </tbody>
+</table>
+	</div>
+    </div>
+<!--**********************************-->
+<!--             Footer               -->
+<!--**********************************-->
+    <div align="right" valign="middle"style="padding:20px 20px; background:#043948; width:673px; border-radius: 0px 0px 8px 8px;">	
+<font color="FFFFFF" style="text-decoration: none; font-size:12px; font-family:'Tahoma', Arial, Helvetica, Geneva, sans-serif;">این ایمیل به این خاطر ارسال شده است که شما با این ایمیل در سایت ما ثبت نام کرده اید.</font>
+<span style="float:left;"><font color="E7CBA3" style="text-decoration: none; font-size:12px; font-family:'Tahoma', Arial, Helvetica, Geneva, sans-serif;" color:#E7CBA3">Copyright &copy; 2013</font></span>
+<div><a href="your-site.com" target="_blank" style="color: #E7CB97; text-decoration: none; font-size:12px; href="http://your-site.com/terms/">قوانین سایت</a> <font color="E7CBA3">|</font> <a style="color: #E7CBA3; text-decoration: none; font-size:12px; style=" target="_blank" href="http://your-site.com/user/privacy/">حذف اشتراک</font></a>
+<span style="float:left;"><font color="E7CBA3" style="text-decoration: none; font-size:12px; font-family:'Halvetica Neue', Arial, Helvetica, Geneva, sans-serif;" color:#E7CBA3">Designed and Coded By amir christ</font>
+</span>
+</span>
+    </div>
+    </div>
+		</td>
+        </tr>
+    <tbody>
+</table>
+</body>
+</html>
+{else}
+{if $bMessageHeader}
+{if isset($sName)}
+{phrase var='core.hello_name' name=$sName}
+{else}
+{phrase var='core.hello'}
+{/if},
+{/if}
+{$sMessage}
+{$sEmailSig}
+ 
+{/if}
